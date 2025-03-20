@@ -89,10 +89,6 @@ header > menu > nav > ul > li > a {
 
 
 #presentation h1 {
-    font-size: 4em;
-    font-family: "Funnel Display", serif;
-    font-weight: 800;
-    font-style: normal;
     margin-bottom: 16px;
 }
 
@@ -122,3 +118,20 @@ header > menu > nav > ul > li > a {
 }
 
 /* CONFIGURAÇÃO PROJETOS */
+
+#projetos {
+    height: 100vh;
+    background-color: blueviolet;
+}
+
+#cards {
+    width: 1200px;
+    height: 100%;
+    padding: 48px;
+    background-color: green;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column nowrap;
+}
