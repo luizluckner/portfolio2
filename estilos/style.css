@@ -11,8 +11,23 @@ body {
 h1 {
     font-size: 4em;
     font-family: "Funnel Display", serif;
-    font-weight: 800;
+    font-weight: bolder;
     font-style: normal;
+}
+
+h2 {
+    font-family: "Funnel Display", serif;
+    font-size: 2.6em;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Funnel Display", serif;
+    font-size: 1.6em;
+}
+
+p {
+    line-height: 1.5em;
 }
 
 /* CONFIGURAÇÕES MENU */
@@ -132,10 +147,14 @@ header > menu > nav > ul > li > a {
     color: white;
 }
 
+#projetos h2 {
+    margin-bottom: 16px;
+}
+
 #cards {
-    width: 1200px;
+    max-width: 1200px;
     height: 100%;
-    padding: 48px;
+    padding: 48px 0;
     margin: auto;
     text-align: center;
     display: flex;
@@ -145,6 +164,7 @@ header > menu > nav > ul > li > a {
 }
 
 #cards-container {
+    width: 100%;
     margin-top: 40px;
     display: flex;
     justify-content: center;
@@ -154,17 +174,26 @@ header > menu > nav > ul > li > a {
 }
 
 .card {
+    height: 100%;
     background-color: #26144B;
     border-radius: 5px;
     overflow: hidden;
     width: 33%;
     color: white;
     box-shadow: 0px 2px 6px 6px rgba(0, 0, 0, 0.221);
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.volkin { /* OCULTADO ATÉ CASE ESTAR PRONTO */
+    /* display: none; */
 }
 
 .card img {
     height: 200px;
     width: 100%;
+    object-fit: cover;
+    box-shadow: 0px 2px 3px black;
 }
 
 .card h3 {
@@ -177,6 +206,7 @@ header > menu > nav > ul > li > a {
     padding: 0 16px;
     font-size: 0.92em;
     display: block;
+    height: 100%;
 }
 
 .card a {
@@ -193,4 +223,5 @@ header > menu > nav > ul > li > a {
 .card a:hover {
     background-color: rgba(255, 255, 255, 0.277);
     transition: background-color .3s;
+    box-shadow: 0px 2px 3px 4px rgba(0, 0, 0, 0.221);
 }
