@@ -13,7 +13,6 @@
 
 body {
     font-family: "Roboto", serif;
-    /* background-color: #160033; */
     background-image: linear-gradient( var(--primary), var(--secundary));
     color: var(--white);
 }
@@ -274,4 +273,21 @@ header > menu > nav > ul > li > a {
 .carrossel img {
     border-radius: 5px;
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.233);
+}
+
+/* CONFIGURAÇÕES SOBRE */
+
+#sobre {
+    height: 100vh;
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px;
+}
+
+.sobre-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
 }
