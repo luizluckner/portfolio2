@@ -109,7 +109,7 @@
         <section class="sobre-container">
             <h2 class="reveal">Sobre mim</h2>
             <p class="reveal">
-                Sou o Luiz Eduardo, tenho 33 anos, casado com a Nati e pai da Catarina.
+                Sou o Luiz Eduardo, tenho <span id="idade">33</span> anos, casado com a Nati e pai da Catarina.
                 Possuo sólida experiência em design de produto, atuando em empresas de tecnologia de diversos setores, com foco na criação de soluções inovadoras e centradas no usuário. Desenvolvo fluxos, protótipos e interfaces com ênfase em usabilidade, eficiência e acessibilidade.
             </p>
             <p class="reveal">
@@ -152,7 +152,7 @@
         </div>
         <div class="footer-bottom">
             <span>© 2026 Luiz Eduardo. Todos os direitos reservados.</span>
-            <span>Florianópolis, SC</span>
+            <span>Florianópolis, Santa Catarina</span>
         </div>
     </div>
 </footer>
@@ -175,6 +175,29 @@
   navList.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => navList.classList.remove('open'));
   });
+
+  // Calcula a idade real considerando se o aniversário deste ano já passou ou não
+function calcularIdade(dataNascimento) {
+  const hoje = new Date();
+  const nascimento = new Date(dataNascimento);
+
+  let idade = hoje.getFullYear() - nascimento.getFullYear();
+
+  // Se ainda não chegou o mês/dia do aniversário este ano, tira 1 da conta
+  const aindaNaoFezAniversario =
+    hoje.getMonth() < nascimento.getMonth() ||
+    (hoje.getMonth() === nascimento.getMonth() && hoje.getDate() < nascimento.getDate());
+
+  if (aindaNaoFezAniversario) idade--;
+
+  return idade;
+}
+
+// Sua data: 02/07/1991 -> formato ISO é ano-mês-dia
+const idadeEl = document.getElementById('idade');
+if (idadeEl) {
+  idadeEl.textContent = calcularIdade('1991-07-02');
+}
 
   // Reveal on scroll: mesma lógica de sempre, observa e anima quando entra na tela
   const revealObserver = new IntersectionObserver((entries) => {
