@@ -49,6 +49,9 @@ nav h3{ font-size:1.3em; }
   content:''; position:absolute; left:0; bottom:0; width:0; height:2px;
   background:var(--pink-bright); transition:width .25s ease;
 }
+
+nav a span .dot { color:aqua; }
+
 .nav-links a:hover::after{ width:100%; }
 .back-link{
   display:inline-flex; align-items:center; gap:6px;
