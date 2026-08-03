@@ -50,6 +50,9 @@ nav h3{ font-size:1.3em; }
   background:var(--pink-bright); transition:width .25s ease;
 }
 .nav-links a:hover::after{ width:100%; }
+
+.dot { color:aqua}
+
 .back-link{
   display:inline-flex; align-items:center; gap:6px;
   font-size:14px; color:var(--muted); text-decoration:none;
