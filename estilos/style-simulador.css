@@ -167,6 +167,8 @@ figcaption{ margin-top:10px; font-size:13px; color:var(--muted); opacity:.75; }
 .related-card h3{ font-size:1.2em; margin-bottom:8px; }
 .related-card .rc-link{ font-size:13.5px; color:var(--pink-bright); font-family:"Roboto Mono", monospace; }
 
+.related-card.vokin {display:none;}
+
 /* ---------- FOOTER (igual ao restante do site) ---------- */
 footer{
   position:relative; overflow:hidden; margin-top:60px;
@@ -184,7 +186,7 @@ footer .blob{
   padding-bottom:48px; border-bottom:1px solid var(--glass-border);
 }
 .menor{ color:var(--pink-bright); text-shadow:0 0 12px rgba(239,57,172,.55); font-size:.95em; }
-.footer-top h2{ max-width:12ch; font-size:clamp(1.9em, 4vw, 2.6em); margin-top:8px; }
+.footer-top h2{ /*max-width:12ch*/; font-size:clamp(1.9em, 4vw, 2.6em); margin-top:8px; }
 .btn_hero{
   text-decoration:none; color:var(--white); padding:10px 20px; display:inline-block;
   border:2px solid rgba(255,255,255,.55); border-radius:6px; margin-top:22px;
