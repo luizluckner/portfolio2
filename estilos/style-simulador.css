@@ -41,6 +41,8 @@ nav{
   padding:20px 24px; margin:auto; max-width:1160px;
   display:flex; justify-content:space-between; align-items:center;
 }
+header nav a h3 span .dot { color:aqua; }
+
 nav a{ text-decoration:none; color:var(--white); }
 nav h3{ font-size:1.3em; }
 .nav-links{ display:flex; gap:36px; list-style:none; }
@@ -50,7 +52,7 @@ nav h3{ font-size:1.3em; }
   background:var(--pink-bright); transition:width .25s ease;
 }
 
-nav a span .dot { color:aqua; }
+
 
 .nav-links a:hover::after{ width:100%; }
 .back-link{
@@ -189,7 +191,7 @@ footer .blob{
   padding-bottom:48px; border-bottom:1px solid var(--glass-border);
 }
 .menor{ color:var(--pink-bright); text-shadow:0 0 12px rgba(239,57,172,.55); font-size:.95em; }
-.footer-top h2{ /*max-width:12ch*/; font-size:clamp(1.9em, 4vw, 2.6em); margin-top:8px; }
+.footer-top h2{ /*max-width:12ch*/ font-size:clamp(1.9em, 4vw, 2.6em); margin-top:8px; }
 .btn_hero{
   text-decoration:none; color:var(--white); padding:10px 20px; display:inline-block;
   border:2px solid rgba(255,255,255,.55); border-radius:6px; margin-top:22px;

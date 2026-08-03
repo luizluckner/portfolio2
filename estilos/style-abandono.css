@@ -51,7 +51,7 @@ nav h3{ font-size:1.3em; }
 }
 .nav-links a:hover::after{ width:100%; }
 
-nav a span .dot { color:aqua; }
+header nav a h3 span .dot { color:aqua; }
 
 .back-link{
   display:inline-flex; align-items:center; gap:6px;
@@ -210,7 +210,17 @@ footer .blob{
   padding-bottom:48px; border-bottom:1px solid var(--glass-border);
 }
 .menor{ color:var(--pink-bright); text-shadow:0 0 12px rgba(239,57,172,.55); font-size:.95em; }
-.footer-top h2{ /*max-width:12ch*/; font-size:clamp(1.9em, 4vw, 2.6em); margin-top:8px; }
+
+
+
+
+
+.footer-top h2{font-size:clamp(1.9em, 4vw, 2.6em); margin-top:8px; }
+
+
+
+
+
 .btn_hero{
   text-decoration:none; color:var(--white); padding:10px 20px; display:inline-block;
   border:2px solid rgba(255,255,255,.55); border-radius:6px; margin-top:22px;
