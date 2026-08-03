@@ -51,7 +51,7 @@ nav h3{ font-size:1.3em; }
 }
 .nav-links a:hover::after{ width:100%; }
 
-.dot { color:aqua}
+nav a .dot { color:aqua; }
 
 .back-link{
   display:inline-flex; align-items:center; gap:6px;
