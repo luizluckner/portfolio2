@@ -1,0 +1,217 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root{
+  --white:#fafafa;
+  --black:#1e1e1e;
+  --bg-0:#0a0119;
+  --bg-1:#180236;
+  --bg-2:#2b1856;
+  --purple:#4a337d;
+  --violet:#5c3788;
+  --magenta:#9a3090;
+  --pink:#cb2791;
+  --pink-bright:#ef39ac;
+  --muted:#c6bcdb;
+  --glass:rgba(255,255,255,.045);
+  --glass-border:rgba(255,255,255,.09);
+}
+
+body{
+  font-family:"Roboto", serif;
+  background:linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 100%);
+  color:var(--white);
+}
+
+h1,h2,h3{ font-family:"Funnel Display", serif; font-style:normal; }
+p{ line-height:1.7em; }
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+::selection{ background:var(--pink); color:var(--white); }
+
+.wrap{ max-width:1160px; margin:auto; padding:0 24px; }
+
+/* ---------- HEADER (igual ao restante do site) ---------- */
+header{
+  position:sticky; top:0; z-index:100;
+  background-color:rgba(10,1,25,.75);
+  backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 var(--glass-border);
+}
+nav{
+  padding:20px 24px; margin:auto; max-width:1160px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+nav a{ text-decoration:none; color:var(--white); }
+nav h3{ font-size:1.3em; }
+.nav-links{ display:flex; gap:36px; list-style:none; }
+.nav-links a{ position:relative; padding-bottom:4px; }
+.nav-links a::after{
+  content:''; position:absolute; left:0; bottom:0; width:0; height:2px;
+  background:var(--pink-bright); transition:width .25s ease;
+}
+.nav-links a:hover::after{ width:100%; }
+.back-link{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; color:var(--muted); text-decoration:none;
+}
+.back-link:hover{ color:var(--pink-bright); }
+
+/* ---------- HERO DO CASE ---------- */
+.case-hero{ padding:56px 24px 20px; }
+.case-hero-card{
+  max-width:1160px; margin:auto;
+  background:var(--glass); border:1px solid var(--glass-border);
+  border-radius:18px; overflow:hidden;
+  display:grid; grid-template-columns:1fr 1fr;
+  box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+.case-hero-info{ padding:48px 44px; }
+.case-logo{ font-family:"Funnel Display", serif; font-size:1.4em; font-weight:700; margin-bottom:36px; }
+.case-logo span{ color:var(--pink-bright); }
+
+.case-hero-info h1{ font-size:clamp(1.7em, 3vw, 2.3em); line-height:1.15; margin-bottom:16px; }
+.case-hero-info > p{ color:var(--muted); font-size:15.5px; max-width:46ch; }
+
+.tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top:24px; }
+.tag{
+  font-size:12.5px; font-family:"Roboto Mono", monospace;
+  border:1px solid var(--glass-border); background:rgba(255,255,255,.03);
+  padding:6px 12px; border-radius:20px; color:var(--muted);
+}
+
+.meta-grid{
+  margin-top:40px; display:grid;
+  grid-template-columns:repeat(3, auto); gap:26px 40px;
+}
+.meta-item .label{
+  font-family:"Roboto Mono", monospace; font-size:11px; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--pink-bright); opacity:.85;
+}
+.meta-item .value{ margin-top:6px; font-size:14.5px; }
+.meta-item .value a{ text-decoration:none; border-bottom:1px solid var(--glass-border); }
+.meta-item .value a:hover{ border-color:var(--pink-bright); }
+
+/* painel de capa do case (imagem real do projeto) */
+.case-hero-image{
+  background:var(--white);
+  display:flex; align-items:center; justify-content:center;
+  border-left:1px solid var(--glass-border);
+}
+.case-hero-image img{ width:100%; height:100%; object-fit:cover; }
+
+/* ---------- CORPO DO CASE ---------- */
+.case-body{
+  max-width:1160px; margin:auto; padding:80px 24px 40px;
+  display:grid; grid-template-columns:1fr 260px; gap:64px; align-items:start;
+}
+.case-content h2{ font-size:1.9em; margin:64px 0 18px; scroll-margin-top:110px; }
+.case-content h2:first-child{ margin-top:0; }
+.case-content h3{ font-size:1.25em; margin:32px 0 12px; color:var(--pink-bright); scroll-margin-top:110px; }
+.case-content p{ color:var(--muted); margin-bottom:16px; max-width:68ch; }
+.case-content p em{ color:var(--white); font-style:normal; }
+
+figure{ margin:28px 0; }
+figure img{
+  border-radius:12px; border:1px solid var(--glass-border);
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+figcaption{ margin-top:10px; font-size:13px; color:var(--muted); opacity:.75; }
+
+.stat-line{
+  display:inline-flex; align-items:baseline; gap:10px; margin:8px 0 24px;
+  padding:14px 20px; border-radius:10px;
+  background:linear-gradient(135deg, rgba(203,39,145,.18), rgba(154,48,144,.1));
+  border:1px solid rgba(239,57,172,.3);
+}
+.stat-line .num{ font-family:"Funnel Display", serif; font-size:1.8em; color:var(--pink-bright); }
+.stat-line .desc{ font-size:14px; color:var(--muted); }
+
+/* cards de abordagem */
+.approach-cards{ display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin:24px 0 8px; }
+.approach-card{
+  background:var(--glass); border:1px solid var(--glass-border); border-radius:12px;
+  padding:22px; transition:border-color .3s ease, transform .3s ease;
+}
+.approach-card:hover{ border-color:rgba(239,57,172,.45); transform:translateY(-3px); }
+.approach-card svg{ width:22px; height:22px; stroke:var(--pink-bright); margin-bottom:14px; }
+.approach-card p{ font-size:14.5px; color:var(--white); margin:0; }
+
+/* sidebar TOC */
+.toc{ position:sticky; top:110px; }
+.toc-label{
+  font-family:"Roboto Mono", monospace; font-size:11px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted); opacity:.7; margin-bottom:14px;
+}
+.toc ul{ list-style:none; border-left:1px solid var(--glass-border); }
+.toc li a{
+  display:block; padding:7px 0 7px 16px; margin-left:-1px;
+  border-left:2px solid transparent; font-size:14px; color:var(--muted);
+  text-decoration:none; transition:color .2s ease, border-color .2s ease;
+}
+.toc li a:hover{ color:var(--white); }
+.toc li a.active{ color:var(--pink-bright); border-left-color:var(--pink-bright); }
+
+/* ---------- OUTROS PROJETOS ---------- */
+.related{ padding:80px 24px 20px; }
+.related h2{ text-align:center; margin-bottom:8px; }
+.related > p.center{ text-align:center; color:var(--muted); margin-bottom:44px; }
+.related-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:1160px; margin:auto; }
+.related-card{
+  border-radius:12px; overflow:hidden; text-decoration:none; color:var(--white);
+  background:var(--glass); border:1px solid var(--glass-border);
+  transition:transform .3s ease, border-color .3s ease;
+}
+.related-card:hover{ transform:translateY(-4px); border-color:rgba(239,57,172,.4); }
+.related-card img{ height:220px; width:100%; object-fit:cover; }
+.related-card .rc-body{ padding:20px 22px; }
+.related-card h3{ font-size:1.2em; margin-bottom:8px; }
+.related-card .rc-link{ font-size:13.5px; color:var(--pink-bright); font-family:"Roboto Mono", monospace; }
+
+/* ---------- FOOTER (igual ao restante do site) ---------- */
+footer{
+  position:relative; overflow:hidden; margin-top:60px;
+  background:linear-gradient(180deg, var(--bg-1), var(--bg-0));
+  padding:100px 24px 32px;
+}
+footer .blob{
+  position:absolute; width:520px; height:520px; border-radius:50%; filter:blur(90px);
+  background:var(--magenta); opacity:.28; bottom:-220px; left:50%; transform:translateX(-50%);
+  pointer-events:none;
+}
+.footer-container{ max-width:1160px; margin:auto; position:relative; z-index:1; }
+.footer-top{
+  display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:32px;
+  padding-bottom:48px; border-bottom:1px solid var(--glass-border);
+}
+.menor{ color:var(--pink-bright); text-shadow:0 0 12px rgba(239,57,172,.55); font-size:.95em; }
+.footer-top h2{ max-width:12ch; font-size:clamp(1.9em, 4vw, 2.6em); margin-top:8px; }
+.btn_hero{
+  text-decoration:none; color:var(--white); padding:10px 20px; display:inline-block;
+  border:2px solid rgba(255,255,255,.55); border-radius:6px; margin-top:22px;
+  transition:background-color .3s, border-color .3s, box-shadow .3s;
+}
+.btn_hero.primary{ background:linear-gradient(135deg, var(--pink), var(--magenta)); border-color:transparent; }
+.btn_hero.primary:hover{ box-shadow:0 0 26px rgba(239,57,172,.55); }
+.socials{ display:flex; gap:16px; }
+.socials a{
+  width:46px; height:46px; border-radius:50%; border:1px solid var(--glass-border); background:var(--glass);
+  display:flex; align-items:center; justify-content:center;
+  transition:border-color .3s ease, transform .3s ease, box-shadow .3s ease; text-decoration:none;
+}
+.socials a:hover{ border-color:rgba(239,57,172,.6); transform:translateY(-4px); box-shadow:0 10px 26px rgba(203,39,145,.3); }
+.socials svg{ width:19px; height:19px; stroke:var(--white); }
+.footer-bottom{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-top:24px; font-size:13px; color:var(--muted); }
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 900px){
+  .case-hero-card{ grid-template-columns:1fr; }
+  .case-hero-image{ border-left:none; border-top:1px solid var(--glass-border); min-height:280px; }
+  .case-body{ grid-template-columns:1fr; }
+  .toc{ position:static; order:-1; margin-bottom:20px; }
+  .toc ul{ display:flex; flex-wrap:wrap; gap:4px 18px; border-left:none; }
+  .toc li a{ border-left:none; border-bottom:2px solid transparent; padding:6px 0; }
+  .toc li a.active{ border-bottom-color:var(--pink-bright); border-left-color:transparent; }
+  .approach-cards{ grid-template-columns:1fr; }
+  .related-grid{ grid-template-columns:1fr; }
+  .nav-links{ display:none; }
+}
